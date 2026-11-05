@@ -10,29 +10,37 @@
   - У услуги можно указать: "priceTo" (цена «от–до»), "price": 0 (Бесплатно), "category" (раздел на странице услуг),
     "bookable": false (без кнопки записи, например бесплатные допуслуги), "icon": null и "photo": null (карточка без картинки).
   - "showDuration": false — длительность услуг клиентам не показывается (но учитывается при подборе времени записи).
+  - Необязательно: "colors.text/muted/card/line" (цвета текста и карточек), "colors.texture" (фактура для кнопок, напр. дерево),
+    "fonts": {"display": "Jost"} (шрифт заголовков из Google Fonts), "gallery": [{"photo","caption"}] (лента фото на главной),
+    "contacts.photo" (фото входа вместо схемы карты).
   - После изменений запустите: python3 tools/build.py  (обновит иконки, манифест и кеш).
 
-  Клиент: барбершоп «Лагом», Воронеж, Плехановская ул., 19. Данные и цены — из карточки 2ГИС (05.11.2026).
+  Клиент: барбершоп «Лагом», Воронеж, Плехановская ул., 19. Цены — из карточки 2ГИС (05.11.2026), фото — из карточек 2ГИС и Яндекс Карт. Мастера — вымышленные, для примера.
 */
 window.BH_CONFIG = {
   "brand": {
-    "name": "LAGOM",
+    "name": "LÁGOM",
     "shortName": "Лагом",
     "monogram": "L",
-    "tagline": "Барбершоп в Воронеже",
+    "tagline": "Men's haircut · Воронеж",
     "city": "Воронеж"
   },
   "colors": {
-    "background": "#0c0c0c",
-    "accent": "#a47148",
-    "accentLight": "#f1ece4"
+    "background": "#0a0a0a",
+    "card": "#151515",
+    "line": "#2a2a2a",
+    "text": "#f4f4f2",
+    "muted": "#9d9d9d",
+    "accent": "#c08a52",
+    "accentLight": "#f4f4f2",
+    "texture": "images/wood.jpg"
   },
-  "photoStyle": "bw",
+  "photoStyle": "original",
   "showDuration": false,
   "hero": {
-    "title": "Стрижка в самый раз",
-    "text": "Мужские и детские стрижки, моделирование бороды и уход за лицом в центре Воронежа. Рейтинг 5,0 в 2ГИС.",
-    "photo": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=75"
+    "title": "Let's get it started",
+    "text": "Мужские и детские стрижки, борода и уход в центре Воронежа. Кофе, своя парковка и мастера, которые слышат, что вы хотите.",
+    "photo": "images/hero.jpg"
   },
   "services": [
     {
@@ -42,7 +50,7 @@ window.BH_CONFIG = {
       "duration": 60,
       "description": "Начинается с подробной консультации: мастер подберёт стрижку под форму лица, тип волос и ваш образ жизни.",
       "icon": "scissors",
-      "photo": "https://images.unsplash.com/photo-1647140655214-e4a2d914971f?auto=format&fit=crop&w=1200&q=75",
+      "photo": "images/cut.jpg",
       "category": "Стрижки",
       "popular": true,
       "priceTo": 2500
@@ -54,7 +62,7 @@ window.BH_CONFIG = {
       "duration": 90,
       "description": "Стрижка и полное моделирование бороды: распаривание, форма, контур и уход.",
       "icon": "scissors",
-      "photo": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1200&q=75",
+      "photo": "images/cut-beard.jpg",
       "category": "Стрижки",
       "popular": true,
       "priceTo": 4000
@@ -66,7 +74,7 @@ window.BH_CONFIG = {
       "duration": 30,
       "description": "Стрижка машинкой, до 3 насадок, без ножниц. Два мытья головы.",
       "icon": "scissors",
-      "photo": "https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1200&q=75",
+      "photo": "images/clipper.jpg",
       "category": "Стрижки",
       "popular": false,
       "priceTo": 1500
@@ -78,7 +86,7 @@ window.BH_CONFIG = {
       "duration": 60,
       "description": "Стрижка машинкой до 3 насадок, два мытья головы и моделирование бороды.",
       "icon": "scissors",
-      "photo": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=1200&q=75",
+      "photo": "images/clipper-beard.jpg",
       "category": "Стрижки",
       "popular": false,
       "priceTo": 3000
@@ -90,7 +98,7 @@ window.BH_CONFIG = {
       "duration": 45,
       "description": "Комплексная процедура: распаривание, качественный гель, форма и чёткий контур.",
       "icon": "scissors",
-      "photo": "https://images.unsplash.com/photo-1599011176306-4a96f1516d4d?auto=format&fit=crop&w=1200&q=75",
+      "photo": "images/beard.jpg",
       "category": "Стрижки",
       "popular": true,
       "priceTo": 1500
@@ -102,7 +110,7 @@ window.BH_CONFIG = {
       "duration": 45,
       "description": "Аккуратная стрижка для маленьких джентльменов — быстро и спокойно.",
       "icon": "scissors",
-      "photo": "https://images.unsplash.com/photo-1657105052497-f996284ffff8?auto=format&fit=crop&w=1200&q=75",
+      "photo": "images/kids.jpg",
       "category": "Стрижки",
       "popular": false,
       "priceTo": 1900
@@ -167,35 +175,36 @@ window.BH_CONFIG = {
   ],
   "barbers": [
     {
-      "id": "dmitry",
-      "name": "Дмитрий",
-      "role": "Барбер",
-      "description": "",
-      "tags": [],
+      "id": "m1",
+      "name": "Максим",
+      "role": "Старший барбер",
+      "description": "Классические и современные мужские стрижки, точные переходы.",
+      "tags": [
+        "Фейд",
+        "Классика"
+      ],
       "photo": null
     },
     {
-      "id": "alena",
-      "name": "Алёна",
+      "id": "m2",
+      "name": "Артём",
       "role": "Барбер",
-      "description": "",
-      "tags": [],
+      "description": "Борода и усы: форма, контур, камуфляж.",
+      "tags": [
+        "Борода",
+        "Камуфляж"
+      ],
       "photo": null
     },
     {
-      "id": "victoria",
-      "name": "Виктория",
+      "id": "m3",
+      "name": "Егор",
       "role": "Барбер",
-      "description": "",
-      "tags": [],
-      "photo": null
-    },
-    {
-      "id": "andrey",
-      "name": "Андрей",
-      "role": "Барбер",
-      "description": "",
-      "tags": [],
+      "description": "Терпеливо стрижёт детей и подростков.",
+      "tags": [
+        "Детские стрижки",
+        "Машинка"
+      ],
       "photo": null
     }
   ],
@@ -223,7 +232,8 @@ window.BH_CONFIG = {
     "telegram": "lagom_voronezh1",
     "whatsapp": null,
     "vk": "https://vk.com/lagom_voronezh",
-    "mapUrl": "https://yandex.ru/maps/org/lagom/179953687466/"
+    "mapUrl": "https://yandex.ru/maps/org/lagom/179953687466/",
+    "photo": "images/facade.jpg"
   },
   "schedule": {
     "mon": [
@@ -262,5 +272,44 @@ window.BH_CONFIG = {
     "slotStep": 30,
     "daysAhead": 14
   },
-  "demoNote": "Демо-версия приложения для барбершопа «Лагом», подготовлена как предложение. Не является официальным сайтом. Фото: Unsplash."
+  "demoNote": "Демо-версия приложения для барбершопа «Лагом», подготовлена как предложение. Не является официальным сайтом. Мастера указаны для примера.",
+  "fonts": {
+    "display": "Jost",
+    "fallback": "system-ui,sans-serif"
+  },
+  "gallery": [
+    {
+      "photo": "images/g-crop.jpg",
+      "caption": "Кроп с плавным фейдом"
+    },
+    {
+      "photo": "images/g-kid.jpg",
+      "caption": "Детская стрижка"
+    },
+    {
+      "photo": "images/g-teen.jpg",
+      "caption": "Работа ножницами"
+    },
+    {
+      "photo": "images/g-camo.jpg",
+      "caption": "Камуфляж бороды"
+    },
+    {
+      "photo": "images/g-mask.jpg",
+      "caption": "Уход за лицом"
+    },
+    {
+      "photo": "images/g-lounge.jpg",
+      "caption": "Зона ожидания"
+    },
+    {
+      "photo": "images/g-clay.jpg",
+      "caption": "Собственная косметика LÁGOM"
+    },
+    {
+      "photo": "images/g-street.jpg",
+      "caption": "Плехановская, 19"
+    }
+  ],
+  "galleryTitle": "Работы и атмосфера"
 };
