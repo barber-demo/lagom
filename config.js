@@ -31,9 +31,8 @@ window.BH_CONFIG = {
     "line": "#2a2a2a",
     "text": "#f4f4f2",
     "muted": "#9d9d9d",
-    "accent": "#c08a52",
-    "accentLight": "#f4f4f2",
-    "texture": "images/wood.jpg"
+    "accent": "#e8e4dc",
+    "accentLight": "#ffffff"
   },
   "photoStyle": "original",
   "showDuration": false,
@@ -311,5 +310,6 @@ window.BH_CONFIG = {
       "caption": "Плехановская, 19"
     }
   ],
-  "galleryTitle": "Работы и атмосфера"
+  "galleryTitle": "Работы и атмосфера",
+  "buttons": "glass"
 };
