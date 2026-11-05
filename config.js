@@ -38,7 +38,7 @@ window.BH_CONFIG = {
   "photoStyle": "original",
   "showDuration": false,
   "hero": {
-    "title": "Let's get it started",
+    "title": "Ровно так, как нужно",
     "text": "Мужские и детские стрижки, борода и уход в центре Воронежа. Кофе, своя парковка и мастера, которые слышат, что вы хотите.",
     "photo": "images/hero.jpg"
   },
