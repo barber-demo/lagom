@@ -311,5 +311,6 @@ window.BH_CONFIG = {
     }
   ],
   "galleryTitle": "Работы и атмосфера",
-  "buttons": "glass"
+  "buttons": "glass",
+  "decor": "tools"
 };
